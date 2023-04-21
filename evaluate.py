@@ -38,27 +38,58 @@ def try_parse_pe(sample_path):
     return True
 
 
-BOS_malware = r'ERMDS-X/test.json'
+
     
 if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("illegal input")
+        exit(0)
+
+    _, mode = sys.argv
+
+    bins = []
+    if mode == 'all':
+        datasets = [r'ERMDS-X/BOS_benign.json', r'ERMDS-X/BOS_malware.json', r'ERMDS-X/SOS_benign.json', r'ERMDS-X/POS_benign.json', r'ERMDS-X/POS_malware.json']
+    elif mode == 'BOS':
+        datasets = [r'ERMDS-X/BOS_benign.json', r'ERMDS-X/BOS_malware.json']
+    elif mode == 'SOS':
+        datasets = [r'ERMDS-X/SOS_benign.json']
+    elif mode == 'POS':
+        datasets = [r'ERMDS-X/POS_benign.json', r'ERMDS-X/POS_malware.json']
+    else:
+        # datasets = [r'ERMDS-X/test.json']
+        print("illegal input")
+        exit(0)
+
+    for dataset in datasets:
+        with open(dataset, 'r') as f:
+            bins += f.readlines()
+
+
     # malconv = Classifier('malconv')
     ember = Classifier('ember')
-
-    with open(BOS_malware, 'r') as f:
-        bins = f.readlines()
-
+    
+    print(f"evaluation begin, mode: {mode}")
+   
+    cnt = 0
+    num = 0
     for bin in bins:
         try:
             feature = json.loads(bin)
         except:
             continue
-
+        
+        num += 1
         label = feature['label']
         is_benign = label == 0
         obfuscation_method = feature['obfuscation']
 
         predict_is_benign = ember.model.is_evasive(feature)
+        if predict_is_benign == is_benign:
+            cnt += 1
         print(f"predict_is_benign: {predict_is_benign}, label: {is_benign}, {obfuscation_method}")
+
+    print(f"file nums: {num}, accuracy: {cnt}/{num}={cnt/num}")
 
     
     
