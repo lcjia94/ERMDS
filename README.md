@@ -23,39 +23,45 @@ Please note that an email not following the conditions might be ignored. We will
 
 ## Installation
 1. Clone this repo from git:
-```
+
+```bash
 git clone https://github.com/lcjia94/ERMDS.git
 ```
 
 2. We recommend setting up a Python 3.6.9 virtual environment (other Python 3.7 or above versions might also work but didn't test).
-```
+
+```bash
 cd ERMDS
 pip install -r requirements.txt
 ```
 
 ## Assessing the Robustness of MDS using ERMDS:
 1. Evaluate the robustness of MDS using all datasets from ERMDS-X
-```
+
+```bash
 python evaluation.py ALL
 ```
 
 2. Evaluate the robustness of MDS using the BOS dataset from ERMDS-X
-```
+
+```bash
 python evaluation.py BOS
 ```
 3. Evaluate the robustness of MDS using the SOS dataset from ERMDS-X
-```
+
+```bash
 python evaluation.py SOS
 ```
 4. Evaluate the robustness of MDS using the POS dataset from ERMDS-X
-```
+
+```bash
 python evaluation.py POS
 ```
 
 ## How to Expand the ERMDS Dataset:
 To facilitate future researchers in defining their own datasets or expanding the ERMDS dataset, we provide a feature extraction script called feature.py. Modify the paths in this file and run the script to obtain sample features in JSON format.
 
-```
+```bash
 python feature.py
 ```
 
