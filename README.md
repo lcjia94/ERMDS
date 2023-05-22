@@ -12,14 +12,14 @@ The feature vectors and example models are open to everyone. Download the data h
 - ERMDS-X: Contains raw features for all samples
 - Models: Contains the Ember model, and we will provide an example of how to use the ERMDS dataset to evaluate the robustness of the EMBER model
 
-We cannot release the original files for the benign software due to copyright considerations. However, we will host the original binaries of malware samples. **To avoid misuse, please read and agree to the following conditions before sending us emails.** Please email [Lichen Jia](lcjia@gmail.com). Also, please include your Gmail address in the body so that we can add you to the Google Drive folder where the dataset is stored.
+<!-- We cannot release the original files for the benign software due to copyright considerations. However, we will host the original binaries of malware samples. **To avoid misuse, please read and agree to the following conditions before sending us emails.** Please email [Lichen Jia](lcjia@gmail.com). Also, please include your Gmail address in the body so that we can add you to the Google Drive folder where the dataset is stored.
 
 - Do not share the data with others (except your co-authors for the project). We are happy to share with other researchers based upon their requests.
 - Explain in a few sentences your plan to use these binaries. It does not need to be a precise plan.
 - If you are in academia, contact us using your institution's email and provide us with a webpage registered at the university domain that contains your name and affiliation.
 - If you are in a research (industrial) lab, send us an email from your company's email account and introduce yourself and your company. In the email, please attach a justification letter (in PDF format) in official letterhead. The letter needs to state clearly the reasons why this dataset is being requested.
 
-Please note that an email not following the conditions might be ignored. We will maintain a public list of organizations accessing these samples at the bottom.
+Please note that an email not following the conditions might be ignored. We will maintain a public list of organizations accessing these samples at the bottom. -->
 
 ## Installation
 1. Clone this repo from git:
