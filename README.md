@@ -66,3 +66,18 @@ python feature.py
 ```
 
 ## Citing
+```
+@article{JIA2023100106,
+title = {ERMDS: A obfuscation dataset for evaluating robustness of learning-based malware detection system},
+journal = {BenchCouncil Transactions on Benchmarks, Standards and Evaluations},
+volume = {3},
+number = {1},
+pages = {100106},
+year = {2023},
+issn = {2772-4859},
+doi = {https://doi.org/10.1016/j.tbench.2023.100106},
+url = {https://www.sciencedirect.com/science/article/pii/S2772485923000236},
+author = {Lichen Jia and Yang Yang and Bowen Tang and Zihan Jiang},
+keywords = {Dataset, Malware detection system, Security, Machine learning, Adversarial malware}
+}
+```
